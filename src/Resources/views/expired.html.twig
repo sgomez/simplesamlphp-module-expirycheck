@@ -1,0 +1,9 @@
+{% set pagetitle = 'SimpleSAMLphp'|trans %}
+{% extends "base.twig" %}
+
+{% block content %}
+    <h2>{{ '{expirycheck:expwarning:access_denied}'|trans([], 'expirycheck') }}</h2>
+    <p>{{ '{expirycheck:expwarning:no_access_to}'|trans({'%NETID%': netId}, "expirycheck") }}</p>
+    <p>{{ '{expirycheck:expwarning:expiry_date_text}'|trans([], 'expirycheck') }} <b>{{ expireOnDate }}</b></p>
+    <p>{{ '{expirycheck:expwarning:contact_home}'|trans([], 'expirycheck') }}</p>
+{% endblock %}
